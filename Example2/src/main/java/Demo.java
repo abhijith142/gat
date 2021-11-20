@@ -10,13 +10,16 @@ public class Demo {
         demo.createBook();
     }
 
-    public void createBook() throws SQLException, ClassNotFoundException {
-        Publisher publisher = new Publisher("pub1", "publisher 1");
+    public void createBook()
+            throws SQLException,
+            ClassNotFoundException {
+        Publisher publisher =
+                new Publisher("pub1",
+                        "publisher 1");
 
-        Book book = new Book("isbn1", "Book 1", publisher);
+        Book book = new Book(
+                "isbn1",
+                "Book 1", publisher);
         bookStoreService.persistBook(book);
-
-//        Book retrievedBook = bookStoreService.retrieveBook("isbn1");
-//        System.out.println(retrievedBook);
     }
 }
